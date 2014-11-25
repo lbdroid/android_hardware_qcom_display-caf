@@ -14,6 +14,8 @@ LOCAL_SRC_FILES               := profiler.cpp mdp_version.cpp \
                                  idle_invalidator.cpp \
                                  comptype.cpp display_config.cpp \
                                  cb_utils.cpp
+LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
